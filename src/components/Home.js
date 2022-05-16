@@ -19,18 +19,18 @@ class Home extends React.Component {
 
   componentDidMount() {
     this.getMovies();
-    console.log(this.state.movies);
+
   }
 
 
   componentDidUpdate() {
-    console.log("i did update!");
+
   }
 
 
   render() {
     const { isLoading, movies } = this.state;
-    console.log(isLoading, movies);
+
 
     return (
       <section className="container">
@@ -48,7 +48,8 @@ class Home extends React.Component {
             title={movie.title} 
             summary={movie.summary} 
             poster={movie.medium_cover_image} 
-            genres={movie.genres} />)
+            genres={movie.genres}
+            MovieInDetail={true} />)
         )}
         </div>
         
